@@ -11,6 +11,10 @@ import java.util.Arrays;
  */
 public class Q455 {
     public static void main(String[] args) {
+        int[] g = new int[]{2, 2, 3};
+        int[] s = new int[]{1, 1};
+        int ans = Solution.findContentChildren(g, s);
+        System.out.println(ans);
 
     }
 
@@ -48,7 +52,7 @@ public class Q455 {
      * 链接：https://leetcode-cn.com/problems/assign-cookies
      * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
-    class Solution {
+    static class Solution {
         /**
          * 证明：假设在某次选择中，贪心策略选择给当前满足度最小的孩子分配第 m 个饼干，第 m 个饼干为可以满足该孩子的最小饼干。
          * 假设存在一种最优策略，可以给该孩子分配第 n 个饼干，并且 m < n。我们可以发现，经过这一轮分配，
@@ -59,7 +63,7 @@ public class Q455 {
          * @param s
          * @return
          */
-        public int findContentChildren(int[] g, int[] s) {
+        public static int findContentChildren(int[] g, int[] s) {
             if (g == null || s == null) {
                 return 0;
             }
