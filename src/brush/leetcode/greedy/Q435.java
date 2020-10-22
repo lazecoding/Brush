@@ -43,9 +43,17 @@ public class Q435 {
      * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
     static class Solution {
+        /**
+         * 根据开始排序
+         * 如果结束更小就能给后面让出更多，当出现覆盖就移除长的
+         * 
+         * @param intervals
+         * @return
+         */
         public static int eraseOverlapIntervals(int[][] intervals) {
             int res=0;
             Arrays.sort(intervals,(arr1,arr2)->(arr1[0]-arr2[0]));
+            System.out.println(Arrays.deepToString(intervals));
             for (int i = 0; i < intervals.length-1; i++) {
                 if (intervals[i][1]>intervals[i+1][0]){
                     res++;
