@@ -67,7 +67,7 @@ public class Example {
     }
 
     public static void main(String[] args) {
-        Integer[] arr = new Integer[]{1, 6, 3, 4, 5};
+        Integer[] arr = new Integer[]{2, 1, 6, 2, 3, 4, 5};
         sort(arr);
         // 编译器默认不适用 assert 检测（但是junit测试中适用），所以要使用时要添加参数虚拟机启动参数 -ea 具体添加过程
         assert isSort(arr);
