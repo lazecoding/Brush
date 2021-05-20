@@ -89,6 +89,4 @@ public class Q39 {
             }
         }
     }
-
-
 }
